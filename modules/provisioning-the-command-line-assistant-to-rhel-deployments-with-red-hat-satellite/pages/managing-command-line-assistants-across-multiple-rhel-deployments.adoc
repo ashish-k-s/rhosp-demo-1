@@ -1,0 +1,27 @@
+#  Managing command-line assistants across multiple RHEL deployments
+
+== Managing Command-Line Assistants Across Multiple RHEL Deployments
+
+In large-scale Red Hat Enterprise Linux (RHEL) environments, managing command-line assistants powered by RHEL Lightspeed across multiple deployments is crucial for maintaining consistency and efficiency. This section will guide you through the process of integrating and managing these assistants using Red Hat Satellite.
+
+### 3.1. Integration with Red Hat Satellite for System Provisioning
+
+Red Hat Satellite is a system management solution that streamlines the deployment, configuration, and maintenance of your RHEL systems. To manage command-line assistants across multiple RHEL deployments, you can leverage Satellite's capabilities to provision and configure these assistants during the system deployment process.
+
+#### Steps to integrate command-line assistants with Red Hat Satellite:
+
+1. **Install and configure Red Hat Satellite**: Ensure that your Satellite server is properly installed and configured to manage your RHEL systems.
+2. **Create a custom activation key**: In the Satellite web UI, create a custom activation key with the necessary subscriptions and Puppet configuration to include the command-line assistant package during system provisioning.
+3. **Associate the activation key with host groups**: Link the custom activation key to the relevant host groups that require the command-line assistant.
+4. **Configure the Satellite manifest**: Update the Satellite manifest to include the command-line assistant package and ensure it is installed during the system provisioning process.
+
+### 3.2. Managing Command-Line Assistants Across Multiple RHEL Deployments
+
+Once the command-line assistants are integrated with Red Hat Satellite, you can manage them across multiple RHEL deployments efficiently.
+
+#### Steps to manage command-line assistants:
+
+1. **Update assistant configurations**: Use Satellite's remote execution feature to update the command-line assistant configurations, such as connection settings or logging preferences, across multiple systems simultaneously.
+2. **Monitor assistant usage**: Leverage Satellite's reporting and monitoring capabilities to track the usage and performance of command-line assistants in your RHEL deployments.
+3. **Perform bulk actions**: Utilize Satellite's bulk actions feature to perform tasks like upgrading or uninstalling the command-line assistant across multiple systems.
+4. **Implement role-based access control (RBAC)**: Configure RBAC in Satellite to control which users or user groups have permission to

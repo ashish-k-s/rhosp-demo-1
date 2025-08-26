@@ -1,0 +1,48 @@
+#  Installing and configuring the command-line assistant
+
+== Installing and Configuring the Command-Line Assistant
+
+To begin utilizing the command-line assistant powered by RHEL Lightspeed, you need to install and configure it on your Red Hat Enterprise Linux (RHEL) system. This section will guide you through the installation process and provide instructions for configuring the assistant to suit your needs.
+
+### Prerequisites
+
+Before proceeding with the installation, ensure that:
+
+1. You have a subscribed RHEL system. For more information on system registration, refer to the [Getting Started with RHEL System Registration](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/getting_started_with_the_rhel_8_web_console/index) documentation.
+2. Your system architecture is supported: AMD and Intel 64-bit (x86_64), ARM64 (aarch64), IBM Z (s390x), or IBM POWER systems (ppc64).
+
+### Installation
+
+The command-line assistant is available in the official RHEL repositories. To install it, run the following command on your RHEL system:
+
+```bash
+sudo dnf install command-line-assistant
+```
+
+Avoid using the `pip install command-line-assistant` command, as Red Hat does not support this installation option.
+
+### Verification
+
+After the installation, verify that the command-line assistant is working correctly by running:
+
+```bash
+c "How to install python?"
+```
+
+This command should trigger the assistant to provide a response with instructions on installing Python.
+
+### Configuration
+
+The command-line assistant can be configured to meet your specific requirements. The configuration file is typically located at `/etc/command-line-assistant/config.yaml`. You can modify this file to customize the assistant's behavior, such as setting up a proxy configuration or changing the default database.
+
+#### Setting Up a Proxy Configuration
+
+If your system requires a proxy to access external resources, you can configure the command-line assistant to use the proxy. Add the following lines to the `config.yaml` file:
+
+```yaml
+proxy:
+  http: <http_proxy_url>
+  https: <https_proxy_url>
+```
+
+Replace `<http_proxy_url>` and `<https_proxy_url>` with the appropriate proxy URLs for your

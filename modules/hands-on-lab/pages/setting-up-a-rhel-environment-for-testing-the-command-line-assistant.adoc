@@ -1,0 +1,47 @@
+#  Setting up a RHEL environment for testing the command-line assistant
+
+== Hands-on Lab: Setting up a RHEL Environment for Testing the Command-Line Assistant
+
+In this section, we will guide you through setting up a Red Hat Enterprise Linux (RHEL) 10 environment for testing the command-line assistant powered by RHEL Lightspeed. This hands-on lab activity will help you understand the practical aspects of using the command-line assistant in a real-world scenario.
+
+### Prerequisites
+
+Before starting this lab, ensure you have the following:
+
+1. A RHEL 10 system or a virtual machine with at least 2 CPU cores, 4 GB RAM, and 20 GB of free disk space.
+2. A Red Hat Customer Portal account to access the necessary repositories and packages.
+3. Basic knowledge of the RHEL command line and package management using `yum` or `dnf`.
+
+### Step 1: Prepare the RHEL Environment
+
+1.1. **Update your system**: Begin by updating your RHEL 10 system to ensure you have the latest packages and security patches. Run the following commands:
+
+```bash
+sudo sudo dnf update -y
+```
+
+1.2. **Register your system with Red Hat Subscription Manager (RHSM)**: Register your system with RHSM using your Red Hat Customer Portal credentials. This step is crucial for accessing the required repositories and packages.
+
+```bash
+sudo subscription-manager register --username <your_username> --password <your_password>
+```
+
+1.3. **Attach your system to a subscription pool**: Attach your system to an appropriate subscription pool using the following command:
+
+```bash
+sudo subscription-manager attach --pool=<pool_id_or_name>
+```
+
+1.4. **Enable the necessary repositories**: Enable the BaseOS and AppStream repositories for RHEL 10.
+
+```bash
+sudo dnf config-manager --enable rhel-9-for-x86_64-baseos-rpms
+sudo dnf config-manager --enable rhel-9-for-x86_64-appstream-rpms
+```
+
+### Step 2: Install the Command-Line Assistant
+
+2.1. **Install the command-line assistant**: Install the command-line assistant powered by RHEL Lightspeed using the following command:
+
+```bash
+sudo

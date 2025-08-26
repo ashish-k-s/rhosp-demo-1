@@ -1,0 +1,52 @@
+#  Installation process and requirements
+
+== Installing the Command-Line Assistant Powered by RHEL Lightspeed
+
+To install the command-line assistant powered by RHEL Lightspeed, follow these steps:
+
+**Prerequisites**
+
+Before proceeding with the installation, ensure you have the following:
+
+1. A subscribed Red Hat Enterprise Linux (RHEL) system. For more information on system registration, refer to the [Getting Started with RHEL System Registration](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/8/html/getting_started_with_the_rhel_8_web_console/index) documentation.
+2. Root access to your system.
+
+**Installation Procedure**
+
+1. Open your terminal.
+2. Run the following command to install the command-line assistant using the official RHEL repositories:
+
+   ```
+   sudo dnf install command-line-assistant
+   ```
+
+   **Note:** Do not use the `pip install command-line-assistant` command, as Red Hat does not support this installation option.
+
+3. Verify the installation by running the command-line assistant. For example:
+
+   ```
+   c "How to install python?"
+   ```
+
+   You should see a response from the assistant, confirming that it is correctly installed and functioning.
+
+**Database Configuration**
+
+The command-line assistant stores its data in a database. You can choose between MySQL or PostgreSQL. Here's how to configure either:
+
+1. Access your database configuration file at `/etc/xdg/command-line-assistant/config.toml`.
+2. Locate and comment out the default SQLite configuration.
+3. Configure the database of your choice by setting the type and details. For MySQL, for instance, it would look like this:
+
+   ```
+   [database]
+   type = "mysql"
+   host = "<hostname_or_ip_address>"
+   port = "3306"
+   ```
+
+   Replace `<hostname_or_ip_address>` with your database server's address.
+
+4. Save and close the file. The command-line assistant will automatically pick up the new configuration.
+
+By following these steps, you will have successfully installed the command-line assistant powered by RHEL Lightspeed on your RHEL system.

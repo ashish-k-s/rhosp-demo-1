@@ -1,0 +1,4 @@
+* xref:hands-on-lab.adoc[]
+** xref:setting-up-a-rhel-environment-for-testing-the-command-line-assistant.adoc[]
+** xref:installing-and-configuring-the-command-line-assistant.adoc[]
+** xref:interacting-with-the-assistant-to-perform-various-tasks.adoc[]

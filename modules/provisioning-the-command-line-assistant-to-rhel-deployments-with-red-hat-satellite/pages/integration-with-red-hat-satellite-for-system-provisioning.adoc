@@ -1,0 +1,43 @@
+#  Integration with Red Hat Satellite for system provisioning
+
+== Integration with Red Hat Satellite for System Provisioning
+
+RHEL Lightspeed's command-line assistant can be seamlessly integrated with Red Hat Satellite for system provisioning. This integration allows administrators to manage and provision command-line assistants across multiple RHEL deployments efficiently.
+
+### Prerequisites
+
+Before proceeding with the integration, ensure the following prerequisites are met:
+
+1. Your system is registered with Insights for Red Hat Enterprise Linux.
+2. You are using the command-line assistant on a host registered to a Satellite 6.17+ server or later versions.
+3. The Satellite Server must be connected to the internet.
+4. You have enabled the AppStream repository on the host to be able to install the command-line assistant.
+
+### Procedure
+
+Follow these steps to integrate the command-line assistant with Red Hat Satellite for system provisioning:
+
+1. **Install the command-line assistant** on your registered host:
+
+   ```
+   sudo dnf install command-line-assistant
+   ```
+
+2. **Locate and open the `/etc/xdg/command-line-assistant/config.toml` file**.
+
+3. **Modify the endpoint configuration** in the `config.toml` file to point to your Satellite or Capsule hostname. For example:
+
+   ```
+   # The endpoint points to an API server.
+   endpoint = "https://satellite.example.server.com/api/lightspeed/v1"
+   ```
+
+4. **Save the changes** in the `config.toml` file.
+
+5. **Restart the command-line assistant daemon (clad)** for the changes to take effect:
+
+   ```
+   sudo systemctl restart clad
+   ```
+
+With these steps, the command-line assistant powered by RHEL Lightspeed is now integrated with Red Hat Satellite, enabling centralized management and provisioning across multiple RHEL deployments. This integration simplifies administration tasks and ensures consistent configurations across your RHEL systems.

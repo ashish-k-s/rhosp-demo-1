@@ -1,0 +1,50 @@
+#  Configuration for use within the RHEL command-line interface
+
+== Installing the Command-Line Assistant Powered by RHEL Lightspeed
+
+In this section, we will cover the installation process and configuration of the command-line assistant for use within the RHEL command-line interface.
+
+### 2. Installation Process and Requirements
+
+To install the command-line assistant powered by RHEL Lightspeed, follow these steps:
+
+1. Open a terminal on your RHEL system.
+2. Run the following command with root privileges to install the package:
+
+   ```
+   sudo dnf install command-line-assistant
+   ```
+
+3. Once the installation is complete, locate and open the `/etc/xdg/command-line-assistant/config.toml` file using a text editor with root privileges. For example:
+
+   ```
+   sudo nano /etc/xdg/command-line-assistant/config.toml
+   ```
+
+### 3. Configuration for Use within the RHEL Command-Line Interface
+
+After opening the `config.toml` file, you can configure the command-line assistant to work with Red Hat Satellite for system provisioning. Here's how:
+
+1. In the `config.toml` file, find the `endpoint` configuration option. This option should point to your Satellite or Capsule hostname. Replace the default endpoint with your own, for example:
+
+   ```
+   # The endpoint points to an API server.
+   endpoint = "https://satellite.example.server.com/api/lightspeed/v1"
+   ```
+
+2. Save the changes in the `config.toml` file.
+
+3. Restart the command-line assistant daemon (`clad`) for the changes to be effective:
+
+   ```
+   sudo systemctl restart clad
+   ```
+
+Now, the command-line assistant is configured and ready for use within the RHEL command-line interface, integrated with Red Hat Satellite for system provisioning. You can start interacting with the assistant to answer questions, troubleshoot issues, understand log files, and receive recommendations.
+
+**Hands-on Activity:**
+
+1. Set up a RHEL environment for testing the command-line assistant.
+2. Install and configure the command-line assistant as described above.
+3. Interact with the assistant by entering the `c` command in the RHEL command-line interface.
+4. Test various functionalities, such as asking questions, troubleshooting, understanding log files, and receiving recommendations

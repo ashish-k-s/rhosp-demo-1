@@ -1,0 +1,10 @@
+#  Hands-on Lab
+
+**Hands-on Lab**
+
+This lab provides a practical, hands-on experience for setting up a Red Hat Enterprise Linux (RHEL) environment to test the command-line assistant powered by RHEL Lightspeed. Key activities include:
+
+- Installing and configuring the command-line assistant within the RHEL command-line interface.
+- Interacting with the assistant to perform various tasks, such as answering questions, troubleshooting issues, understanding log files, and seeking recommendations.
+- Gaining firsthand experience in leveraging AI-driven expertise for managing RHEL systems.
+- Learning to use natural language to access the assistant's capabilities, making it accessible for users of varying technical proficiency levels.

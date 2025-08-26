@@ -1,10 +1,16 @@
-name: REPLACEREPONAME
-title: FIXME Course Title
+name: rhosp-demo-1
+title:  Providing Feedback on Red Hat Documentation: RHEL Lightspeed for RHEL Systems
 version: 1
 nav:
 - modules/ROOT/nav.adoc
 - modules/LABENV/nav.adoc
-- modules/chapter1/nav.adoc
-- modules/chapter2/nav.adoc
-- modules/chapter3/nav.adoc
+
+- modules/introducing-rhel-lightspeed-for-rhel-systems/nav.adoc
+
+- modules/installing-the-command-line-assistant-powered-by-rhel-lightspeed/nav.adoc
+
+- modules/provisioning-the-command-line-assistant-to-rhel-deployments-with-red-hat-satellite/nav.adoc
+
+- modules/hands-on-lab/nav.adoc
+
 - modules/appendix/nav.adoc

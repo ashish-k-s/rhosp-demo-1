@@ -1,0 +1,5 @@
+#  Installing the Command-Line Assistant Powered by RHEL Lightspeed
+
+== Installing the Command-Line Assistant Powered by RHEL Lightspeed
+
+To utilize the command-line assistant powered by RHEL Lightspeed, it must be installed on your RHEL system via the official repositories. Supported architectures include AMD and Intel 64-bit (x86_64), ARM64 (aarch64), IBM Z (s390x), and IBM POWER systems (ppc64). Avoid using the 'pip install command-line-assistant' command as Red Hat does not support this method. Ensure you have a subscribed RHEL system before installation. The installation process involves running the command 'sudo dnf install command-line-assistant'. Post-installation, verify it by executing 'c "How to install python?"'. This assistant aids in configuring, managing, and troubleshooting RHEL systems, as detailed in subsequent chapters.

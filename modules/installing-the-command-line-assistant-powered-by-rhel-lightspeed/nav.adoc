@@ -1,0 +1,3 @@
+* xref:installing-the-command-line-assistant-powered-by-rhel-lightspeed.adoc[]
+** xref:installation-process-and-requirements.adoc[]
+** xref:configuration-for-use-within-the-rhel-command-line-interface.adoc[]

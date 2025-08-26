@@ -1,0 +1,3 @@
+* xref:introducing-rhel-lightspeed-for-rhel-systems.adoc[]
+** xref:understanding-the-role-of-the-command-line-assistant-in-rhel-lightspeed.adoc[]
+** xref:exploring-functionalities-answering-questions-troubleshooting-log-file-understanding-and-recommendations.adoc[]
