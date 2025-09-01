@@ -1,0 +1,65 @@
+#  Hands-on lab: Deploying a basic RHOSP environment
+
+== Hands-on Lab: Deploying a Basic Red Hat OpenStack Platform (RHOSP) Environment
+
+In this hands-on lab, you will deploy a basic Red Hat OpenStack Platform (RHOSP) environment. This activity will guide you through setting up the control plane and data plane components, as well as configuring networking services, storage options, and compute resources.
+
+### Prerequisites
+
+- Familiarity with Linux command line interface
+- Access to a Red Hat OpenStack Platform environment (either a physical or virtual machine setup)
+- Minimum of 4 virtual machines with the following specifications:
+  - Controller node: 2 CPU cores, 4 GB RAM
+  - Network node: 2 CPU cores, 4 GB RAM
+  - Compute nodes (minimum of 2): 2 CPU cores, 4 GB RAM each
+- All nodes should have network connectivity
+
+### Objective
+
+By the end of this lab, you will have a basic RHOSP environment deployed and running, with the control plane and data plane components properly configured.
+
+### Steps
+
+#### 1. Prepare the Control Plane Node
+
+1.1 Update the system packages:
+```bash
+sudo yum update -y
+```
+
+1.2 Install the necessary packages:
+```bash
+sudo yum install -y openstack-packstack epel-release
+```
+
+#### 2. Configure the Control Plane Node
+
+2.1 Run the packstack script to install and configure the control plane:
+```bash
+sudo packstack --gen-answer-file=answers.txt
+```
+
+2.2 Review and, if necessary, modify the `answers.txt` file to suit your environment. Then, run the packstack script with the generated answers file:
+```bash
+sudo packstack --answer-file=answers.txt
+```
+
+#### 3. Prepare the Data Plane Nodes (Network and Compute)
+
+3.1 On the network node, register it with the control plane:
+```bash
+sudo packstack --register-network-nodes
+```
+
+3.2 On each compute node, register them with the control plane:
+```bash
+sudo packstack --register-compute-nodes
+```
+
+#### 4. Configure Networking Services
+
+4.1 Enable and start the necessary network services:
+```bash
+sudo systemctl enable neutron-server
+sudo systemctl start neutron-server
+```

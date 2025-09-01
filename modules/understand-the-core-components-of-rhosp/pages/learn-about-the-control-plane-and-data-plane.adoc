@@ -1,0 +1,33 @@
+#  Learn about the control plane and data plane
+
+== Learn about the control plane and data plane
+
+In Red Hat OpenStack Platform (RHOSP), the architecture is divided into two primary components: the control plane and the data plane. Understanding these components is crucial for managing and operating an OpenStack cloud effectively.
+
+**Control Plane**
+
+The control plane, also known as the Orchestration Plane, is responsible for managing and controlling the entire OpenStack cloud. It consists of essential services that handle tasks such as authentication, authorization, service discovery, and resource allocation. The control plane components communicate with each other using a message queue to ensure high availability and scalability.
+
+Key control plane services in RHOSP include:
+
+1. **Keystone**: The identity service that provides API endpoints for authentication and authorization.
+2. **Glance**: The image service responsible for storing and retrieving disk images and snapshots.
+3. **Cinder**: The block storage service that manages the creation, deletion, and attachment of block storage devices.
+4. **Neutron**: The networking service that provides an extensible framework for networking, enabling the creation and management of network resources.
+5. **Nova**: The compute service that manages and orchestrates virtual machines (VMs) and bare metal resources.
+6. **Heat**: The orchestration service that automates the deployment and scaling of applications by managing stacks (collections of resources).
+
+**Data Plane**
+
+The data plane, also known as the Compute or Storage Plane, is responsible for executing the actual workloads and storing data. It consists of the resources that directly interact with the VMs, instances, and storage devices. The data plane components are scaled horizontally to accommodate increasing workloads.
+
+Key data plane services in RHOSP include:
+
+1. **Compute Nodes**: Physical servers that run the Nova compute service and host VMs and bare metal servers.
+2. **Storage Nodes**: Physical servers that provide block, object, and file storage using services like Cinder, Swift, and Manila.
+3. **Network Nodes**: Physical servers that run the Neutron service and provide networking services, such as software-defined networking (SDN) and virtual private networks (VPNs).
+
+**Hands-on Lab: Exploring Control and Data Plane Components**
+
+To gain a better understanding of the control and data planes in RHOSP, let's walk through a simple hands-on lab activity.
+

@@ -1,0 +1,6 @@
+* xref:understand-the-core-components-of-rhosp.adoc[]
+** xref:learn-about-the-control-plane-and-data-plane.adoc[]
+** xref:examine-the-networking-services-in-rhosp.adoc[]
+** xref:study-the-storage-options-in-rhosp.adoc[]
+** xref:investigate-the-compute-resources-in-rhosp.adoc[]
+** xref:hands-on-lab-deploying-a-basic-rhosp-environment.adoc[]

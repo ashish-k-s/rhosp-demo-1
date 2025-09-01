@@ -1,0 +1,37 @@
+#  Study the storage options in RHOSP
+
+== Study the storage options in RHOSP
+
+Red Hat OpenStack Platform (RHOSP) offers a variety of storage options to cater to diverse use cases. These storage options can be broadly categorized into ephemeral storage, persistent storage, and object storage.
+
+**Ephemeral Storage**
+
+Ephemeral storage is temporary storage that is tied to the lifecycle of a virtual machine (VM). When a VM is deleted, all data stored on its ephemeral disks is lost. This type of storage is typically used for caching, buffering, or as scratch space for applications running on VMs. In RHOSP, ephemeral storage is provided by the Compute service (Nova).
+
+**Persistent Storage**
+
+Persistent storage, also known as block storage, retains data even when no VMs are connected. This storage type is ideal for applications requiring reliable, high-performance storage. RHOSP provides persistent storage through the Block Storage service (Cinder). Cinder allows you to create and manage volumes that can be attached to VMs as if they were internal disks.
+
+**Object Storage**
+
+Object storage is designed for storing large amounts of unstructured data, such as images, videos, and documents. It is highly scalable, durable, and flexible. In RHOSP, object storage is provided by the OpenStack Object Storage service (Swift). Swift stores data as objects in containers, offering APIs for both application developers and users to store and retrieve data.
+
+**Hands-on Lab: Creating and Managing Cinder and Swift Storage**
+
+To gain practical experience with RHOSP storage options, follow this hands-on lab:
+
+1. **Access the RHOSP Dashboard**: Log in to the RHOSP Dashboard using your credentials.
+
+2. **Create a Cinder Volume**:
+   - Navigate to the "Project" > "Volumes" section.
+   - Click "Create Volume," provide a name, description, and size, then select the appropriate availability zone and bootable option.
+   - Click "Create Volume" to initiate the process.
+
+3. **Attach the Cinder Volume to a VM**:
+   - Go to the "Project" > "Instances" section.
+   - Select the desired VM and click "Attach Volume."
+   - Choose the newly created Cinder volume and click "Attach."
+
+4. **Access the Attached Cinder Volume**:
+   - Log in to the VM via SSH.
+   - Identify

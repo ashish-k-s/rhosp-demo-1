@@ -1,5 +1,5 @@
 site:
-  title:  Providing Feedback on Red Hat Documentation: RHEL Lightspeed for RHEL Systems
+  title:  Red Hat OpenStack Platform (RHOSP) Architecture
   start_page: rhosp-demo-1::index.adoc
 
 content:

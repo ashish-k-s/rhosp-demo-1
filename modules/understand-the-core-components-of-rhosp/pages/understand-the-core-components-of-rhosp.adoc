@@ -1,0 +1,11 @@
+#  Understand the core components of RHOSP
+
+- **Control Plane**: This is the brain of RHOSP, responsible for managing and monitoring the entire cloud infrastructure. It includes essential services like Identity (Keystone), Dashboard (Horizon), Orchestration (Heat), and Orchestration API (Glance, Cinder, Nova).
+  
+- **Data Plane**: This is where the actual workloads run. It comprises the Compute (Nova), Networking (Neutron), and Storage (Cinder, Swift, Manila) services that handle the compute resources, networking, and storage respectively.
+
+- **Networking Services**: RHOSP provides robust networking capabilities through Neutron, which enables the creation of virtual networks and routers. It also supports various plugins for advanced networking features.
+
+- **Storage Options**: RHOSP offers diverse storage solutions. Cinder provides block storage, Swift offers object storage, and Manila provides shared file system storage. Each has its unique use cases based on performance, scalability, and durability requirements.
+
+- **Compute Resources**: Nova, the compute service, manages instances (virtual machines) and handles their lifecycle. It interacts with other services to allocate resources, boot instances, and manage their states.

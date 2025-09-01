@@ -1,0 +1,38 @@
+#  Investigate the compute resources in RHOSP
+
+== Investigate the Compute Resources in Red Hat OpenStack Platform (RHOSP)
+
+In Red Hat OpenStack Platform (RHOSP), compute resources are managed by the Nova component. Nova, or OpenStack Compute, is responsible for creating and managing virtual machines (VMs) and bare metal resources. This section will delve into the core aspects of compute resources in RHOSP, including instances, flavors, images, and availability zones.
+
+### 1. Instances
+
+An *instance* in RHOSP represents a running virtual machine or a bare-metal server. Users can create, update, and delete instances based on their requirements. Each instance has a unique name, and it can be associated with specific flavors, images, and availability zones.
+
+#### Hands-on Activity: Creating an Instance
+
+1. Log in to the OpenStack Dashboard (horizon).
+2. Navigate to the "Compute" section and select "Instances."
+3. Click on "Launch Instance" and provide the necessary details, such as instance name, flavor, image, and network.
+4. Review the summary and confirm the instance creation.
+
+### 2. Flavors
+
+A *flavor* defines the hardware resources (CPU, memory, storage) allocated to an instance. Flavors allow users to choose from predefined resource configurations or create custom ones tailored to their needs.
+
+#### Hands-on Activity: Exploring Available Flavors
+
+1. In the OpenStack Dashboard, navigate to the "Compute" section and select "Flavors."
+2. Review the list of available flavors, noting their names, RAM, vCPUs, and root disk size.
+3. Create a new flavor with custom specifications by clicking on "Create Flavor."
+
+### 3. Images
+
+An *image* in RHOSP is a disk snapshot containing the operating system and any additional software required for an instance. Users can choose from a library of pre-built images or upload custom images.
+
+#### Hands-on Activity: Uploading a Custom Image
+
+1. In the OpenStack Dashboard, navigate to the "Compute" section and select "Images."
+2. Click on "Create Image" and provide the necessary details, such as image name, description, and the disk format.
+3. Select the disk or volume containing the custom image and upload it.
+
+### 4. Availability Z

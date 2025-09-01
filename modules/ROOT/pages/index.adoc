@@ -1,9 +1,9 @@
-=  Providing Feedback on Red Hat Documentation: RHEL Lightspeed for RHEL Systems
+=  Red Hat OpenStack Platform (RHOSP) Architecture
 :navtitle: Home
 
 == Introduction
 
-Course Title:  Providing Feedback on Red Hat Documentation: RHEL Lightspeed for RHEL Systems
+Course Title:  Red Hat OpenStack Platform (RHOSP) Architecture
 
 Description:
 Course description FIXME
@@ -13,13 +13,7 @@ Duration: FIXME hours
 == Topics covered in this course
 
 
-*  Introducing RHEL Lightspeed for RHEL Systems
-
-*  Installing the Command-Line Assistant Powered by RHEL Lightspeed
-
-*  Provisioning the Command-Line Assistant to RHEL Deployments with Red Hat Satellite
-
-*  Hands-on Lab
+*  Understand the core components of RHOSP
 
 
 

@@ -1,0 +1,34 @@
+#  Examine the networking services in RHOSP
+
+== Examine the Networking Services in Red Hat OpenStack Platform (RHOSP)
+
+Red Hat OpenStack Platform (RHOSP) offers a robust networking service that enables the creation of virtual networks and provides connectivity for virtual machines (VMs) and other cloud resources. The networking services in RHOSP are primarily managed by Neutron, the OpenStack networking component. This section will delve into the core networking services provided by Neutron and explore how to configure and utilize them effectively.
+
+### Core Networking Services in Neutron
+
+1. **Networks**: Virtual networks that provide connectivity for VMs and other cloud resources. These networks can be created using various network types, such as flat, VLAN, VXLAN, GRE, and GENEVE.
+
+2. **Subnets**: Subdivisions of networks that allow for IP address allocation to VMs and other cloud resources. Each subnet must belong to a unique network and must have an IP address range assigned to it.
+
+3. **Routers**: Virtual routers that provide routing services between different networks and the external world. Routers can connect multiple networks and facilitate communication between them.
+
+4. **Security Groups**: Firewall rules applied at the instance level to control inbound and outbound traffic. Security groups act as virtual firewalls, allowing or denying traffic based on protocols, ports, and source/destination IP addresses.
+
+5. **Load Balancers**: Distribute incoming traffic across multiple VMs to ensure high availability and scalability. OpenStack supports integration with various load balancer solutions, including Octavia, HAProxy, and NGINX.
+
+6. **Floating IPs**: Publicly routable IP addresses that can be associated with VMs to provide external access. Floating IPs enable direct communication with VMs from outside the private network.
+
+### Configuring and Utilizing Neutron Networking Services
+
+To effectively utilize Neutron's networking services, follow these steps:
+
+1. **Create a Network**: Use the `openstack network create` command to create a new network with a specific type (e.g., vlan, vxlan).
+
+   ```
+   openstack network create --provider-network-type vlan --provider-physical-network physnet1 my_network
+   ```
+
+2. **Create a Subnet**: Use the `openstack subnet create` command to create a subnet within a network, specifying an IP address range.
+
+   ```
+   openstack subnet create --network my_network --
