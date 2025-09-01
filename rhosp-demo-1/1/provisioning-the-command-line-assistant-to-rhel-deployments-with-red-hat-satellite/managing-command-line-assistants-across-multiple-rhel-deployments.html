@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Managing command-line assistants across multiple RHEL deployments :: Red Hat OpenStack Platform (RHOSP) Architecture</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Red Hat OpenStack Platform (RHOSP) Architecture</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/REPLACEREPONAME/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rhosp-demo-1" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Red Hat OpenStack Platform (RHOSP) Architecture</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../LABENV/index.html">Lab Environment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../understand-the-core-components-of-rhosp/understand-the-core-components-of-rhosp.html">Understand the core components of RHOSP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../understand-the-core-components-of-rhosp/learn-about-the-control-plane-and-data-plane.html">Learn about the control plane and data plane</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../understand-the-core-components-of-rhosp/examine-the-networking-services-in-rhosp.html">Examine the networking services in RHOSP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../understand-the-core-components-of-rhosp/study-the-storage-options-in-rhosp.html">Study the storage options in RHOSP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../understand-the-core-components-of-rhosp/investigate-the-compute-resources-in-rhosp.html">Investigate the compute resources in RHOSP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../understand-the-core-components-of-rhosp/hands-on-lab-deploying-a-basic-rhosp-environment.html">Hands-on lab: Deploying a basic RHOSP environment</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix/appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat OpenStack Platform (RHOSP) Architecture</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Red Hat OpenStack Platform (RHOSP) Architecture</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Red Hat OpenStack Platform (RHOSP) Architecture</a></li>
+    <li><a href="managing-command-line-assistants-across-multiple-rhel-deployments.html">Managing command-line assistants across multiple RHEL deployments</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Managing command-line assistants across multiple RHEL deployments</h1>
+<div class="sect1">
+<h2 id="_managing_command_line_assistants_across_multiple_rhel_deployments"><a class="anchor" href="#_managing_command_line_assistants_across_multiple_rhel_deployments"></a>Managing Command-Line Assistants Across Multiple RHEL Deployments</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In large-scale Red Hat Enterprise Linux (RHEL) environments, managing command-line assistants powered by RHEL Lightspeed across multiple deployments is crucial for maintaining consistency and efficiency. This section will guide you through the process of integrating and managing these assistants using Red Hat Satellite.</p>
+</div>
+<div class="sect2">
+<h3 id="_3_1_integration_with_red_hat_satellite_for_system_provisioning"><a class="anchor" href="#_3_1_integration_with_red_hat_satellite_for_system_provisioning"></a>3.1. Integration with Red Hat Satellite for System Provisioning</h3>
+<div class="paragraph">
+<p>Red Hat Satellite is a system management solution that streamlines the deployment, configuration, and maintenance of your RHEL systems. To manage command-line assistants across multiple RHEL deployments, you can leverage Satellite&#8217;s capabilities to provision and configure these assistants during the system deployment process.</p>
+</div>
+<div class="sect3">
+<h4 id="_steps_to_integrate_command_line_assistants_with_red_hat_satellite"><a class="anchor" href="#_steps_to_integrate_command_line_assistants_with_red_hat_satellite"></a>Steps to integrate command-line assistants with Red Hat Satellite:</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Install and configure Red Hat Satellite</strong>: Ensure that your Satellite server is properly installed and configured to manage your RHEL systems.</p>
+</li>
+<li>
+<p><strong>Create a custom activation key</strong>: In the Satellite web UI, create a custom activation key with the necessary subscriptions and Puppet configuration to include the command-line assistant package during system provisioning.</p>
+</li>
+<li>
+<p><strong>Associate the activation key with host groups</strong>: Link the custom activation key to the relevant host groups that require the command-line assistant.</p>
+</li>
+<li>
+<p><strong>Configure the Satellite manifest</strong>: Update the Satellite manifest to include the command-line assistant package and ensure it is installed during the system provisioning process.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_2_managing_command_line_assistants_across_multiple_rhel_deployments"><a class="anchor" href="#_3_2_managing_command_line_assistants_across_multiple_rhel_deployments"></a>3.2. Managing Command-Line Assistants Across Multiple RHEL Deployments</h3>
+<div class="paragraph">
+<p>Once the command-line assistants are integrated with Red Hat Satellite, you can manage them across multiple RHEL deployments efficiently.</p>
+</div>
+<div class="sect3">
+<h4 id="_steps_to_manage_command_line_assistants"><a class="anchor" href="#_steps_to_manage_command_line_assistants"></a>Steps to manage command-line assistants:</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><strong>Update assistant configurations</strong>: Use Satellite&#8217;s remote execution feature to update the command-line assistant configurations, such as connection settings or logging preferences, across multiple systems simultaneously.</p>
+</li>
+<li>
+<p><strong>Monitor assistant usage</strong>: Leverage Satellite&#8217;s reporting and monitoring capabilities to track the usage and performance of command-line assistants in your RHEL deployments.</p>
+</li>
+<li>
+<p><strong>Perform bulk actions</strong>: Utilize Satellite&#8217;s bulk actions feature to perform tasks like upgrading or uninstalling the command-line assistant across multiple systems.</p>
+</li>
+<li>
+<p><strong>Implement role-based access control (RBAC)</strong>: Configure RBAC in Satellite to control which users or user groups have permission to</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

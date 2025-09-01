@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Configuration for use within the RHEL command-line interface :: Red Hat OpenStack Platform (RHOSP) Architecture</title>
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Red Hat OpenStack Platform (RHOSP) Architecture</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/REPLACEREPONAME/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rhosp-demo-1" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Red Hat OpenStack Platform (RHOSP) Architecture</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../LABENV/index.html">Lab Environment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../understand-the-core-components-of-rhosp/understand-the-core-components-of-rhosp.html">Understand the core components of RHOSP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../understand-the-core-components-of-rhosp/learn-about-the-control-plane-and-data-plane.html">Learn about the control plane and data plane</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../understand-the-core-components-of-rhosp/examine-the-networking-services-in-rhosp.html">Examine the networking services in RHOSP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../understand-the-core-components-of-rhosp/study-the-storage-options-in-rhosp.html">Study the storage options in RHOSP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../understand-the-core-components-of-rhosp/investigate-the-compute-resources-in-rhosp.html">Investigate the compute resources in RHOSP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../understand-the-core-components-of-rhosp/hands-on-lab-deploying-a-basic-rhosp-environment.html">Hands-on lab: Deploying a basic RHOSP environment</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix/appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat OpenStack Platform (RHOSP) Architecture</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Red Hat OpenStack Platform (RHOSP) Architecture</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Red Hat OpenStack Platform (RHOSP) Architecture</a></li>
+    <li><a href="configuration-for-use-within-the-rhel-command-line-interface.html">Configuration for use within the RHEL command-line interface</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Configuration for use within the RHEL command-line interface</h1>
+<div class="sect1">
+<h2 id="_installing_the_command_line_assistant_powered_by_rhel_lightspeed"><a class="anchor" href="#_installing_the_command_line_assistant_powered_by_rhel_lightspeed"></a>Installing the Command-Line Assistant Powered by RHEL Lightspeed</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this section, we will cover the installation process and configuration of the command-line assistant for use within the RHEL command-line interface.</p>
+</div>
+<div class="sect2">
+<h3 id="_2_installation_process_and_requirements"><a class="anchor" href="#_2_installation_process_and_requirements"></a>2. Installation Process and Requirements</h3>
+<div class="paragraph">
+<p>To install the command-line assistant powered by RHEL Lightspeed, follow these steps:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Open a terminal on your RHEL system.</p>
+</li>
+<li>
+<p>Run the following command with root privileges to install the package:</p>
+<div class="literalblock">
+<div class="content">
+<pre>```
+sudo dnf install command-line-assistant
+```</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Once the installation is complete, locate and open the <code>/etc/xdg/command-line-assistant/config.toml</code> file using a text editor with root privileges. For example:</p>
+<div class="literalblock">
+<div class="content">
+<pre>```
+sudo nano /etc/xdg/command-line-assistant/config.toml
+```</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_configuration_for_use_within_the_rhel_command_line_interface"><a class="anchor" href="#_3_configuration_for_use_within_the_rhel_command_line_interface"></a>3. Configuration for Use within the RHEL Command-Line Interface</h3>
+<div class="paragraph">
+<p>After opening the <code>config.toml</code> file, you can configure the command-line assistant to work with Red Hat Satellite for system provisioning. Here&#8217;s how:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the <code>config.toml</code> file, find the <code>endpoint</code> configuration option. This option should point to your Satellite or Capsule hostname. Replace the default endpoint with your own, for example:</p>
+<div class="literalblock">
+<div class="content">
+<pre>```
+# The endpoint points to an API server.
+endpoint = "https://satellite.example.server.com/api/lightspeed/v1"
+```</pre>
+</div>
+</div>
+</li>
+<li>
+<p>Save the changes in the <code>config.toml</code> file.</p>
+</li>
+<li>
+<p>Restart the command-line assistant daemon (<code>clad</code>) for the changes to be effective:</p>
+<div class="literalblock">
+<div class="content">
+<pre>```
+sudo systemctl restart clad
+```</pre>
+</div>
+</div>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Now, the command-line assistant is configured and ready for use within the RHEL command-line interface, integrated with Red Hat Satellite for system provisioning. You can start interacting with the assistant to answer questions, troubleshoot issues, understand log files, and receive recommendations.</p>
+</div>
+<div class="paragraph">
+<p><strong>Hands-on Activity:</strong></p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Set up a RHEL environment for testing the command-line assistant.</p>
+</li>
+<li>
+<p>Install and configure the command-line assistant as described above.</p>
+</li>
+<li>
+<p>Interact with the assistant by entering the <code>c</code> command in the RHEL command-line interface.</p>
+</li>
+<li>
+<p>Test various functionalities, such as asking questions, troubleshooting, understanding log files, and receiving recommendations</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

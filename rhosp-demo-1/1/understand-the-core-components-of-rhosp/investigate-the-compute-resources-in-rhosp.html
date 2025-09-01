@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Investigate the compute resources in RHOSP :: Red Hat OpenStack Platform (RHOSP) Architecture</title>
+    <link rel="prev" href="study-the-storage-options-in-rhosp.html">
+    <link rel="next" href="hands-on-lab-deploying-a-basic-rhosp-environment.html">
+    <meta name="generator" content="Antora 3.1.3">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://www.redhat.com" target="_blank"><img src="../../../_/img/redhat-logo.png" height="40px" alt="Red Hat"></a>
+      <a class="navbar-item" style="font-size: 24px; color: white" href="../../..">Red Hat OpenStack Platform (RHOSP) Architecture</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://github.com/RedHatQuickCourses/REPLACEREPONAME/issues" target="_blank">Report Issues</a>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="rhosp-demo-1" data-version="1">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Red Hat OpenStack Platform (RHOSP) Architecture</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../index.html">Home</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../LABENV/index.html">Lab Environment</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="understand-the-core-components-of-rhosp.html">Understand the core components of RHOSP</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="learn-about-the-control-plane-and-data-plane.html">Learn about the control plane and data plane</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="examine-the-networking-services-in-rhosp.html">Examine the networking services in RHOSP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="study-the-storage-options-in-rhosp.html">Study the storage options in RHOSP</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="investigate-the-compute-resources-in-rhosp.html">Investigate the compute resources in RHOSP</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="hands-on-lab-deploying-a-basic-rhosp-environment.html">Hands-on lab: Deploying a basic RHOSP environment</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix/appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Red Hat OpenStack Platform (RHOSP) Architecture</span>
+    <span class="version">1</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Red Hat OpenStack Platform (RHOSP) Architecture</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">1</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Red Hat OpenStack Platform (RHOSP) Architecture</a></li>
+    <li><a href="understand-the-core-components-of-rhosp.html">Understand the core components of RHOSP</a></li>
+    <li><a href="investigate-the-compute-resources-in-rhosp.html">Investigate the compute resources in RHOSP</a></li>
+  </ul>
+</nav>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Investigate the compute resources in RHOSP</h1>
+<div class="sect1">
+<h2 id="_investigate_the_compute_resources_in_red_hat_openstack_platform_rhosp"><a class="anchor" href="#_investigate_the_compute_resources_in_red_hat_openstack_platform_rhosp"></a>Investigate the Compute Resources in Red Hat OpenStack Platform (RHOSP)</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In Red Hat OpenStack Platform (RHOSP), compute resources are managed by the Nova component. Nova, or OpenStack Compute, is responsible for creating and managing virtual machines (VMs) and bare metal resources. This section will delve into the core aspects of compute resources in RHOSP, including instances, flavors, images, and availability zones.</p>
+</div>
+<div class="sect2">
+<h3 id="_1_instances"><a class="anchor" href="#_1_instances"></a>1. Instances</h3>
+<div class="paragraph">
+<p>An <strong>instance</strong> in RHOSP represents a running virtual machine or a bare-metal server. Users can create, update, and delete instances based on their requirements. Each instance has a unique name, and it can be associated with specific flavors, images, and availability zones.</p>
+</div>
+<div class="sect3">
+<h4 id="_hands_on_activity_creating_an_instance"><a class="anchor" href="#_hands_on_activity_creating_an_instance"></a>Hands-on Activity: Creating an Instance</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Log in to the OpenStack Dashboard (horizon).</p>
+</li>
+<li>
+<p>Navigate to the "Compute" section and select "Instances."</p>
+</li>
+<li>
+<p>Click on "Launch Instance" and provide the necessary details, such as instance name, flavor, image, and network.</p>
+</li>
+<li>
+<p>Review the summary and confirm the instance creation.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_2_flavors"><a class="anchor" href="#_2_flavors"></a>2. Flavors</h3>
+<div class="paragraph">
+<p>A <strong>flavor</strong> defines the hardware resources (CPU, memory, storage) allocated to an instance. Flavors allow users to choose from predefined resource configurations or create custom ones tailored to their needs.</p>
+</div>
+<div class="sect3">
+<h4 id="_hands_on_activity_exploring_available_flavors"><a class="anchor" href="#_hands_on_activity_exploring_available_flavors"></a>Hands-on Activity: Exploring Available Flavors</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the OpenStack Dashboard, navigate to the "Compute" section and select "Flavors."</p>
+</li>
+<li>
+<p>Review the list of available flavors, noting their names, RAM, vCPUs, and root disk size.</p>
+</li>
+<li>
+<p>Create a new flavor with custom specifications by clicking on "Create Flavor."</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_3_images"><a class="anchor" href="#_3_images"></a>3. Images</h3>
+<div class="paragraph">
+<p>An <strong>image</strong> in RHOSP is a disk snapshot containing the operating system and any additional software required for an instance. Users can choose from a library of pre-built images or upload custom images.</p>
+</div>
+<div class="sect3">
+<h4 id="_hands_on_activity_uploading_a_custom_image"><a class="anchor" href="#_hands_on_activity_uploading_a_custom_image"></a>Hands-on Activity: Uploading a Custom Image</h4>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>In the OpenStack Dashboard, navigate to the "Compute" section and select "Images."</p>
+</li>
+<li>
+<p>Click on "Create Image" and provide the necessary details, such as image name, description, and the disk format.</p>
+</li>
+<li>
+<p>Select the disk or volume containing the custom image and upload it.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_4_availability_z"><a class="anchor" href="#_4_availability_z"></a>4. Availability Z</h3>
+
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="study-the-storage-options-in-rhosp.html">Study the storage options in RHOSP</a></span>
+  <span class="next"><a href="hands-on-lab-deploying-a-basic-rhosp-environment.html">Hands-on lab: Deploying a basic RHOSP environment</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <img src="../../../_/img/rhl-logo-red.png" height="40px" alt="Red Hat"  href="https://redhat.com" >
+</footer><script id="site-script" src="../../../_/js/site.js" data-ui-root-path="../../../_"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
